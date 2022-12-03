@@ -7,9 +7,6 @@ fn square(number: i32) -> i32 {
 }
 
 fn main() {
-    let _k: i32 = 24;
-    let _n: i32 = 70;
-
     'outer: for i in 4..100 {
         for j in 4..100 {
             let pyramid_result: i32 = pyramid(i);
