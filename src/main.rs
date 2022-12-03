@@ -1,9 +1,25 @@
+fn pyramid(number: i32) -> i32 {
+    number * (number + 1) * ((2 * number) + 1) / 6
+}
+
+fn square(number: i32) -> i32 {
+    number * number
+}
+
 fn main() {
-    let k: i32 = 24;
-    let n: i32 = 70;
+    let _k: i32 = 24;
+    let _n: i32 = 70;
 
-    let pyramid: i32 = k * (k + 1) * ((2 * k) + 1) / 6;
-    let square:i32 = n * n;
+    'outer: for i in 4..100 {
+        for j in 4..100 {
+            let pyramid_result: i32 = pyramid(i);
+            let square_result: i32 = square(j);
 
-    println!("pyramid: {}, square: {}", pyramid, square);
+            println!("{}:{} - pyramid: {}, square: {}", i, j, pyramid_result, square_result);
+            if pyramid_result == square_result {
+                println!("DONE");
+                break 'outer;
+            }
+        }
+    }
 }
