@@ -12,7 +12,6 @@ fn main() {
             let pyramid_result: i32 = square_pyramid(i);
             let square_result: i32 = square(j);
 
-            // println!("{}:{} - pyramid: {}, square: {}", i, j, pyramid_result, square_result);
             if pyramid_result == square_result {
                 println!("Canonballs: {}", pyramid_result);
                 break 'outer;
